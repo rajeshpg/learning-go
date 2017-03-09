@@ -1,0 +1,166 @@
+Getting started with Golang
+
+* Golang
+
+is
+
+- created at Google by Robert Griesmer, Rob Pike, Ken Thompson
+- statically typed
+- natively compiled
+- garbage collected
+- system language
+
+features
+
+- type inference
+- fast compilation
+- concurrency primitives
+
+
+: .caption Learn at least one new language every year - [[https://pragprog.com/book/tpp/the-pragmatic-programmer][The Pragmatic Programmer]]
+
+* Hello world
+.play -edit -numbers helloworld.go /package main/,/^}
+.background static/gopher.jpg
+
+- compile
+  > go build helloworld.go
+- run
+  > ./helloworld
+- compile and run in one command
+  > go run helloworld.go
+: unused dependencies are a compile-time error (not a warning, an error)
+: naming conventions
+: compile and run in one step. go run getting-started.go
+: build and then run, two steps. go build helloworld.go & ./helloworld
+
+* Variables and declaration
+.code -edit -numbers variables/variables.go /func variables/,/^}
+
+: variables and constants here
+
+* Data types
+
+*Booleans:* bool
+default value: false
+
+  var golang_is_easy = true
+
+*Numbers:*
+signed and unsigned integers
+default value: 0
+
+- uint/int
+- uint8/int8
+- uint16/int16
+- uint32/int32
+- uint64/int64
+
+  var i int64 = 1234567890
+
+* Data types
+
+*Floats:*
+default value: 0
+
+- float32: 32-bit floating-point numbers
+- float64: 64-bit floating-point numbers
+
+  var f float32 = 1.2
+
+
+*Complex:*
+default value: (0+0i)
+
+- complex64: complex numbers with float32 real and imaginary parts.
+- complex128: complex numbers with float64 real and imaginary parts.
+
+  var complex = cmplx.Sqrt(-5 + 12i)
+
+: all data types here
+
+* Control structures
+.code -numbers controls/controls.go /func.simpleFor/,/^}
+
+`for` is a while
+.code -numbers controls/controls.go /func.while/,/^}
+
+an infinite loop
+.code -numbers controls/controls.go /func.infiniteLoop/,/^}
+
+* Data Structures: Arrays
+
+.code arrays/arrays.go /func.simpleArray/,/^}
+
+* Data Structures: Slices
+
+- Slices are build on Arrays.
+.play -numbers slice/slice.go /emptySlice/,/makeSlice/
+- add elements or another slice/array using append
+.code -numbers slice/slice.go /append/,/fused/
+- slicing an array
+.code -numbers slice/slice.go /arr/,/slice4/
+
+* Data structures: Maps
+.code -numbers maps/maps.go
+
+
+* Structs
+- declare a struct
+.code -numbers structs/structs.go /type Person/,/^}/
+- initialize a struct
+.code -numbers structs/structs.go /p1/,/p2/
+- initialize with new
+.code -numbers structs/structs.go /p3/,/p3.Fname/
+: p3. This allocates memory for all the fields, sets each of them to their zero value and returns a pointer.
+
+* Interfaces
+Structural inheritance
+.code -numbers interfaces/interfaces.go
+: explain interfaces here
+
+* Functions
+Simple functions
+.code -numbers functions/functions.go /func.functions/,/^}/
+.code -numbers functions/functions.go /func.Swap/,/^}/
+
+* Functions
+functions for structs
+.code -numbers structs/structs.go /type Person/,/^}/
+.code -numbers structs/structs.go /Fullname()/,/^}/
+
+: explain pointer receivers
+
+* Functions
+inherit functions from interfaces
+.code -numbers interfaces/interfaces.go /type Shape/,/^}/
+.code -numbers functions/functions.go /type Circle/,/^}/
+.code -numbers functions/functions.go /Area/,/^}/
+.code -numbers functions/functions.go /areaOfShape/,/^}/
+.play -numbers functions/functions.go /func.main/,/^}/
+
+
+* Goroutines
+
+- similar to thread but scheduled by go
+- runs the code/function concurrently with other code
+
+* Goroutines: example
+
+.code -numbers concurrency/concur.go /package/,/anonymous/
+
+* Goroutines: example
+.code -numbers concurrency/concur.go /go numbers/,/^}/
+
+* Go tools
+- godoc
+- gofmt
+- golint
+
+
+* References
+.link https://github.com/golang/go/wiki/GoUsers GoUsers
+.link https://talks.golang.org/2012/splash.article#TOC_15 Go at Google
+.link https://tour.golang.org/list Golang tour
+
+* Q & A

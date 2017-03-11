@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"rajeshpg.com/learning-go/structs"
+	"github.com/rajeshpg/learning-go/structs"
 )
 
 func main() {

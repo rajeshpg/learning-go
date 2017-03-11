@@ -5,8 +5,8 @@ import (
 	"math"
 	"reflect"
 
-	"rajeshpg.com/learning-go/interfaces"
-	"rajeshpg.com/learning-go/structs"
+	"github.com/rajeshpg/learning-go/interfaces"
+	"github.com/rajeshpg/learning-go/structs"
 )
 
 func functions() {

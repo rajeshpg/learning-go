@@ -3,7 +3,7 @@
 
 By Rajesh Pitty
 
-## Presentation as PDF
+## Presentation as HTML
 
 Grab the [slides as HTML](https://github.com/rajeshpg/learning-go/raw/master/getting-started-with-golang.zip).
 

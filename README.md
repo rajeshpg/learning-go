@@ -9,7 +9,7 @@ Grab the [slides as HTML](https://github.com/rajeshpg/learning-go/raw/master/get
 
 ## Launch (and run!) the presentation locally
 
-- install go-lang by following instructions [here](https://nats.io/documentation/tutorials/go-install/)
+- install go-lang by following instructions [here](https://golang.org/doc/install)
 - clone this repo (preferebly into $GOPATH/src/github.com/rajeshpg/learning-go to execute snippets)
 - install go tool present \
   `go get golang.org/x/tools/cmd/present`

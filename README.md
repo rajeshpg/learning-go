@@ -17,5 +17,3 @@ Grab the [slides as HTML](https://github.com/rajeshpg/learning-go/raw/master/get
   `present -base .`
 
 ## Questions, feedback, more GO ?
-
-Visit us at #golang in the slack!
